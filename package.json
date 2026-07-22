@@ -1,17 +1,19 @@
 {
   "name": "hostal-verona-api",
   "version": "1.0.0",
-  "description": "Backend de sincronizacion para Hostal Verona. Incluye dos variantes: server.js (PostgreSQL, para Railway) y server-mysql.js (MySQL, para Hostinger u otro hosting compartido).",
+  "description": "Backend de sincronizacion para Hostal Verona. Incluye tres variantes: server-supabase.js (Supabase/Postgres via API, recomendado para Hostinger), server.js (PostgreSQL directo, para Railway) y server-mysql.js (MySQL, para hosting compartido con MySQL).",
   "type": "module",
-  "main": "server.js",
+  "main": "server-supabase.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server-supabase.js",
+    "start:postgres": "node server.js",
     "start:mysql": "node server-mysql.js"
   },
   "engines": {
     "node": ">=18"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
