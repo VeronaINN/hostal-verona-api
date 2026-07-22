@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Backend de sincronizacion para Hostal Verona. Incluye dos variantes: server.js (PostgreSQL, para Railway) y server-mysql.js (MySQL, para Hostinger u otro hosting compartido).",
   "type": "module",
-  "main": "server-mysql.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server-mysql.js",
+    "start": "node server.js",
     "start:mysql": "node server-mysql.js"
   },
   "engines": {
